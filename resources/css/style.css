@@ -1,0 +1,108 @@
+
+
+/* Universal Styles */
+
+html, body {
+  font-family: "Helvetica";
+  font-size: 16px;
+  margin: 0 auto;
+  background-color: white;
+
+}
+
+.container {
+  padding: 0 1.5em;
+}
+
+.content {
+  text-align: left; /* For all left align text */
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+}
+
+
+/* Header/Navigation */
+header {
+  background-color: orange;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  height: 64px;
+  width: 100%;
+  /* padding: 0 24px; */
+
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+
+/* Banner */
+
+.banner {
+  display: flex;
+  /* height: 100%; */
+  background-color: grey;
+}
+
+.banner .image-container {
+  width: 60%;
+  margin: 2em 1.5em;
+}
+
+/* Supporting Section*/
+
+.supporting {
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  height: 25em;
+}
+
+.supporting .quote {
+  background-color: green;
+  height: 100%;
+  width: 60%;
+}
+
+.supporting .sidebar {
+  background-color: blue;
+  /* height: 100%; */
+  width: 40%;
+}
+
+/* Classes */
+
+.classes {
+  background-color: grey;
+  height: 25em;
+}
+
+/* Exhibits */
+.exhibits {
+  background-color: white;
+  height: 25em;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  border-top: 1px solid grey;
+  justify-content: space-between;
+  margin: auto 1.5em;
+  padding-top: 1em;
+  padding-bottom: 5em;
+
+}
