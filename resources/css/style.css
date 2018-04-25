@@ -10,12 +10,19 @@ html, body {
 
 }
 
+
 .container {
   padding: 0 1.5em;
 }
 
+
 .content {
-  text-align: left; /* For all left align text */
+  /* display: flex;
+  flex-direction: column; */
+  text-align: left;
+  /* justify-content: space-between; */
+  /* margin-left: 2em; */
+
 }
 
 .image-container {
@@ -30,17 +37,20 @@ html, body {
 
 /* Header/Navigation */
 header {
-  background-color: orange;
+  background-color: white;
 }
-nav {
+
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1.5em;
   color: black;
   height: 64px;
-  width: 100%;
-  /* padding: 0 24px; */
+}
 
+header nav ul {
+  display: flex;
 }
 
 nav ul li {
@@ -53,14 +63,43 @@ nav ul li {
 
 .banner {
   display: flex;
-  /* height: 100%; */
   background-color: grey;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .banner .image-container {
   width: 60%;
-  margin: 2em 1.5em;
+  margin: 2em 0;
 }
+
+.banner .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15em;
+  margin-left: 2em;
+  width: 20em;
+}
+
+.banner .content p {
+  color: white;
+  background-color: black;
+  padding: 1em 0;
+  width: 100%;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 2.45em;
+  font-weight: bold;
+}
+
+.banner h3 {
+  font-size: 1.5em;
+  /* font-weight: bold; */
+}
+
 
 /* Supporting Section*/
 
@@ -78,9 +117,14 @@ nav ul li {
 }
 
 .supporting .sidebar {
+  display: flex;
+  flex-direction: column;
   background-color: blue;
-  /* height: 100%; */
   width: 40%;
+}
+
+.sidebar .info {
+  display: flex;
 }
 
 /* Classes */
