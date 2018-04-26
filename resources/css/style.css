@@ -7,22 +7,29 @@ html, body {
   font-size: 16px;
   margin: 0 auto;
   background-color: white;
+  overflow-y: auto;
 
 }
-
 
 .container {
-  padding: 0 1.5em;
+  padding: 0 1.5rem;
 }
 
-
 .content {
-  /* display: flex;
-  flex-direction: column; */
-  text-align: left;
-  /* justify-content: space-between; */
-  /* margin-left: 2em; */
+  display: flex;
+  align-items: center;
+}
 
+h1 {
+  font-size: 2.45rem;
+  font-weight: bold;
+
+}
+
+p {
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.4;
 }
 
 .image-container {
@@ -32,10 +39,33 @@ html, body {
 .image-container img {
   display: block;
   width: 100%;
+  margin: 0 auto;
 }
 
+.text-container {
+  display: block;
+  text-align: left;
+}
+
+#text-info {
+  display: block;
+  text-align: left;
+}
+
+#text-info h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 1rem 0;
+}
+
+#text-info p {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 1rem 0;
+}
 
 /* Header/Navigation */
+
 header {
   background-color: white;
 }
@@ -62,18 +92,70 @@ nav ul li {
 /* Banner */
 
 .banner {
-  display: flex;
-  background-color: grey;
-  /* justify-content: center; */
-  align-items: center;
+  background-color: rgb(220,220,220);
 }
 
-.banner .image-container {
+.banner .content .image-container {
   width: 60%;
-  margin: 2em 0;
+  margin: 2rem 0;
 }
 
-.banner .content {
+#start-cta {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  /* height: 15em; */
+  margin-left: 2em;
+  width: 20em;
+}
+
+#start-cta h1 {
+  margin: 2rem 0;
+}
+
+#start-cta p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 2rem 0;
+  line-height: 1.4;
+}
+
+#start-cta #button  {
+  color: white;
+  background-color: black;
+  margin: 2.5rem 0;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Supporting Section*/
+
+
+.supporting {
+  display: flex;
+  justify-content: flex-start;
+  background-color: red;
+}
+
+/*quote*/
+.quote {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  text-align: left;
+  padding: 2rem 2rem;
+
+}
+
+.quote .image-container {
+  width: 100%;
+  height: 25rem;
+  margin: 0 auto;
+}
+
+.quote .content #text-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,49 +164,44 @@ nav ul li {
   width: 20em;
 }
 
-.banner .content p {
-  color: white;
-  background-color: black;
-  padding: 1em 0;
-  width: 100%;
-  text-align: center;
-}
 
-.banner h1 {
-  font-size: 2.45em;
-  font-weight: bold;
-}
-
-.banner h3 {
-  font-size: 1.5em;
-  /* font-weight: bold; */
-}
-
-
-/* Supporting Section*/
-
-.supporting {
-  display: flex;
-  justify-content: flex-start;
-  background-color: white;
-  height: 25em;
-}
-
-.supporting .quote {
-  background-color: green;
-  height: 100%;
-  width: 60%;
-}
-
-.supporting .sidebar {
+/*sidebar*/
+.sidebar {
   display: flex;
   flex-direction: column;
-  background-color: blue;
+  background-color: white;
   width: 40%;
+  padding: 1rem 0;
 }
 
-.sidebar .info {
+.sidebar .content {
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+
+.sidebar .content .image-container {
+  width: 35%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sidebar .content .image-container img {
+
+  object-fit: cover;
+  max-width: 10em;
+  max-height: 10em;
+  height: auto;
+  width: auto;
+
+
+}
+
+.sidebar .content #text-info {
+  width: 65%;
+  margin: 0 1.5em;
+  /* height: auto; */
 }
 
 /* Classes */
