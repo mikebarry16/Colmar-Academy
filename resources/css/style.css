@@ -26,6 +26,17 @@ h1 {
 
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-weight: bold;
+}
+
 p {
   font-size: 1rem;
   text-align: left;
@@ -54,7 +65,6 @@ p {
 
 #text-info h3 {
   font-size: 1.2rem;
-  font-weight: normal;
   margin: 1rem 0;
 }
 
@@ -136,7 +146,7 @@ nav ul li {
 .supporting {
   display: flex;
   justify-content: flex-start;
-  background-color: red;
+
 }
 
 /*quote*/
@@ -151,7 +161,7 @@ nav ul li {
 
 .quote .image-container {
   width: 100%;
-  height: 25rem;
+  height: 22rem;
   margin: 0 auto;
 }
 
@@ -175,7 +185,7 @@ nav ul li {
 }
 
 .sidebar .content {
-  padding: 1rem 2rem 1rem 1rem;
+  margin: 1rem 2rem 1rem 1rem;
 }
 
 
@@ -208,22 +218,69 @@ nav ul li {
 
 .classes {
   background-color: grey;
-  height: 25em;
+  /* height: 25em; */
+  margin: 0 auto;
+  padding: 0 3rem 2rem 3rem;
 }
+
+.classes h2 {
+  text-align: center;
+}
+
+.classes .row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+}
+
+.row .content {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 1rem;
+  background-color: white;
+}
+
+.classes #text-info {
+  padding: .5rem 1rem;
+}
+
+
 
 /* Exhibits */
 .exhibits {
+  display: block;
   background-color: white;
-  height: 25em;
+  /* height: 25em; */
+}
+
+.exhibits h2 {
+  text-align: center;
+}
+
+.exhibits .video {
+  width: 60%;
+}
+
+.exhibits .supporting {
+  padding: .5rem 1.5rem 2rem 1.5rem;
+
 }
 
 /* Footer */
 footer {
   display: flex;
+  /* width: 100%; */
   border-top: 1px solid grey;
   justify-content: space-between;
-  margin: auto 1.5em;
-  padding-top: 1em;
-  padding-bottom: 5em;
+  margin: auto 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
 
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
 }
