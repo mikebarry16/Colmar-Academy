@@ -3,8 +3,9 @@
 /* Universal Styles */
 
 html, body {
-  font-family: "Helvetica";
+  font-family: 'Merriweather Sans', sans-serif;
   font-size: 16px;
+  color: hsl(183, 1%, 27%);
   margin: 0 auto;
   background-color: white;
   overflow-y: auto;
@@ -12,35 +13,47 @@ html, body {
 }
 
 .container {
+  max-width: 1200px;
   padding: 0 1.5rem;
-}
-
-.content {
-  display: flex;
-  align-items: center;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 2.45rem;
-  font-weight: bold;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
 
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.75rem;
+  font-weight: 800;
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
 
 h3 {
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 p {
-  font-size: 1rem;
+  font-size: .85rem;
+  font-weight: 300;
   text-align: left;
-  line-height: 1.4;
+  line-height: 1.6;
+  color: hsl(183, 1%, 48%);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 300;
+  color: hsl(183, 1%, 19%);
+}
+
+li {
+  font-weight: 400;
+  font-size: .9rem;
 }
 
 .image-container {
@@ -65,26 +78,48 @@ p {
 
 #text-info h3 {
   font-size: 1.2rem;
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 
 #text-info p {
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 1rem 0;
+  font-size: .8rem;
+  margin: 12px 0;
 }
 
-/* Header/Navigation */
+.highlight {
+  background-color: hsl(45, 0%, 90%);
+}
+
+.sidebar {
+  display: flex;
+  width: 40%;
+  border-left: 1px solid hsl(45, 0%, 90%);
+  flex-direction: column;
+  background-color: white;
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+/* Header */
 
 header {
   background-color: white;
+}
+
+#colmar {
+  color: hsl(183, 1%, 27%);
+  font-weight: 700;
+}
+
+#academy {
+  color: hsl(45, 0%, 60%);
 }
 
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5em;
+  /* padding: 0 1.5em; */
   color: black;
   height: 64px;
 }
@@ -98,74 +133,123 @@ nav ul li {
   margin-left: 1em;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  /* height: 2rem; */
+}
+
+header a {
+  color: hsla(60, 0%, 8%, 0.9);
+}
+
+.logo img {
+  height: 2.75rem;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.1rem;
+  margin-left: .25rem;
+}
+
 
 /* Banner */
 
 .banner {
-  background-color: rgb(220,220,220);
+  background-color: hsl(45, 0%, 76%);
 }
 
-.banner .content .image-container {
+.banner .container {
+  display: flex;
+  align-items: center;
+}
+
+.banner .content {
+  /* height: 545px; */
+}
+
+.banner .image-container {
   width: 60%;
   margin: 2rem 0;
+  /* height: 490px; */
 }
 
-#start-cta {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
-  /* height: 15em; */
+#cta-container {
+  width: 40%;
+  display: block;
+}
+
+#cta-container div {
+  text-align: left;
+  max-width: 325px;
+}
+
+#cta-container {
   margin-left: 2em;
-  width: 20em;
+  width: 40%;
 }
 
-#start-cta h1 {
+#cta-container h1 {
   margin: 2rem 0;
 }
 
-#start-cta p {
+#cta-container p {
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: 400;
   margin: 2rem 0;
   line-height: 1.4;
+  color: hsl(183, 1%, 27%);
 }
 
-#start-cta #button  {
-  color: white;
-  background-color: black;
+#cta-container #button  {
+  background-color: hsl(183, 1%, 19%);
   margin: 2.5rem 0;
-  padding: 1rem 0;
+  padding: .5rem 0;
   width: 100%;
+  /* text-align: center; */
+}
+
+#button p {
+  font-weight: 300;
+  color: white;
   text-align: center;
+  margin: 0;
+  font-size: .85rem;
 }
 
 
-/* Supporting Section*/
 
 
-.supporting {
+/* Campus Info/ Supporting Section*/
+
+
+.campus {
   display: flex;
   justify-content: flex-start;
+  /* padding: 2rem 1.5rem; */
 
 }
 
-/*quote*/
-.quote {
+/* Main */
+.main {
   display: flex;
   flex-direction: column;
   width: 60%;
   text-align: left;
-  padding: 2rem 2rem;
+  margin-right: 1.5rem;
+  padding: 2rem 0;
 
 }
 
-.quote .image-container {
+.main .image-container {
   width: 100%;
-  height: 22rem;
+  /* height: 22rem; */
+  height: fit-content;
   margin: 0 auto;
 }
 
-.quote .content #text-info {
+.main .content #text-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -174,18 +258,26 @@ nav ul li {
   width: 20em;
 }
 
+.main #text-info p {
+  margin-top: 24px;
+}
 
-/*sidebar*/
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  width: 40%;
-  padding: 1rem 0;
+.main #text-info h2 {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+
+.campus .sidebar {
+  padding-top: 1rem;
 }
 
 .sidebar .content {
-  margin: 1rem 2rem 1rem 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 1rem 4rem 1rem 1rem;
+
 }
 
 
@@ -199,13 +291,6 @@ nav ul li {
 
 .sidebar .content .image-container img {
 
-  object-fit: cover;
-  max-width: 10em;
-  max-height: 10em;
-  height: auto;
-  width: auto;
-
-
 }
 
 .sidebar .content #text-info {
@@ -214,11 +299,11 @@ nav ul li {
   /* height: auto; */
 }
 
+
 /* Classes */
 
 .classes {
-  background-color: grey;
-  /* height: 25em; */
+  background-color: hsl(45, 0%, 90%);
   margin: 0 auto;
   padding: 0 3rem 2rem 3rem;
 }
@@ -243,44 +328,58 @@ nav ul li {
 }
 
 .classes #text-info {
-  padding: .5rem 1rem;
+  padding: 1rem 1rem;
+}
+
+.classes #text-info p {
+  /* margin-bottom: 1rem; */
 }
 
 
-
 /* Exhibits */
+
 .exhibits {
   display: block;
   background-color: white;
   /* height: 25em; */
 }
 
+.exhibits .container {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .exhibits h2 {
   text-align: center;
+  padding-bottom: 0;
 }
 
-.exhibits .video {
-  width: 60%;
+.exhibits .sidebar {
+  border: none;
 }
 
-.exhibits .supporting {
-  padding: .5rem 1.5rem 2rem 1.5rem;
-
+.video-container {
+  margin-bottom: .5rem;
 }
 
 /* Footer */
 footer {
   display: flex;
   /* width: 100%; */
-  border-top: 1px solid grey;
+  border-top: 1px solid hsl(45, 0%, 90%);
   justify-content: space-between;
   margin: auto 1.5rem;
   padding-top: 1rem;
   padding-bottom: 5rem;
+  font-size: .75rem;
 
 }
 
 footer a {
-  text-decoration: none;
-  color: black;
+  margin-left: .5rem;
+}
+
+footer p,
+footer a {
+  font-size: .7rem;
 }
