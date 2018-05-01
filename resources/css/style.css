@@ -19,7 +19,7 @@ html, body {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.2rem;
   font-weight: 800;
   line-height: 1.2;
 
@@ -178,47 +178,38 @@ header a {
 #cta-container {
   width: 40%;
   display: block;
-}
-
-#cta-container div {
-  text-align: left;
-  max-width: 325px;
-}
-
-#cta-container {
   margin-left: 2em;
-  width: 40%;
+}
+
+#cta-container #cta {
+  text-align: left;
+  max-width: 350px;
 }
 
 #cta-container h1 {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 #cta-container p {
-  font-size: 1.2em;
+  font-size: 1.35rem;
   font-weight: 400;
-  margin: 2rem 0;
-  line-height: 1.4;
+  margin: 1.5rem 0 2rem 0;
   color: hsl(183, 1%, 27%);
 }
 
-#cta-container #button  {
-  background-color: hsl(183, 1%, 19%);
-  margin: 2.5rem 0;
+#button  {
+  background-color: hsl(183, 1%, 27%);
   padding: .5rem 0;
   width: 100%;
-  /* text-align: center; */
 }
 
-#button p {
+p#button  {
   font-weight: 300;
   color: white;
   text-align: center;
-  margin: 0;
+  margin-bottom: 2rem;
   font-size: .85rem;
 }
-
-
 
 
 /* Campus Info/ Supporting Section*/
