@@ -136,7 +136,6 @@ nav ul li {
 .logo {
   display: flex;
   align-items: center;
-  /* height: 2rem; */
 }
 
 header a {
@@ -151,6 +150,48 @@ header a {
 .logo span {
   font-size: 1.1rem;
   margin-left: .25rem;
+}
+
+header .mobile {
+  display: none;
+}
+
+/* Header Mobile */
+@media only screen and (max-width: 680px) {
+
+  header .desktop {
+    display: none;
+  }
+
+  header .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 .75rem;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile li {
+    padding: 0;
+    height: 2.2rem;
+  }
+
+  nav a {
+    vertical-align: bottom;
+
+  }
+
+  a img {
+    height: 100%;
+  }
+
+
 }
 
 
@@ -211,6 +252,66 @@ p#button  {
   font-size: .85rem;
 }
 
+/* Banner Mobile */
+@media only screen and (max-width: 680px) {
+  .banner {
+    width: 100%;
+  }
+
+  .banner .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .banner .image-container {
+    width: 100%;
+    margin: 0 auto;
+    height: 25rem;
+    background-image: url("../../resources/images/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+
+  .banner .image-container img {
+    display: none;
+  }
+
+  #cta-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #cta-container #cta {
+    max-width: 100%;
+    margin: 0 2rem;
+  }
+
+  #cta-container h1 {
+    line-height: 1.5;
+    font-size: 2.5rem;
+  }
+
+  #cta-container p {
+    /* line-height: 1.5; */
+    font-size: 1.5rem;
+  }
+
+  #button  {
+    background-color: hsl(183, 1%, 55%);
+  }
+
+  p#button {
+    font-size: 1.3rem;
+  }
+
+
+}
+
+
+
 
 /* Campus Info/ Supporting Section*/
 
@@ -266,9 +367,7 @@ p#button  {
 .sidebar .content {
   display: flex;
   width: 100%;
-  align-items: center;
   padding: 1rem 4rem 1rem 1rem;
-
 }
 
 
@@ -280,14 +379,76 @@ p#button  {
 
 }
 
-.sidebar .content .image-container img {
-
+.sidebar .content .image-container .mobile {
+  display: none;
 }
 
 .sidebar .content #text-info {
   width: 65%;
   margin: 0 1.5em;
   /* height: auto; */
+}
+
+.campus .sidebar #text-info p:last-child {
+  color: hsla(206, 100%, 50%, .8);
+}
+
+#visible-mobile {
+  display: none;
+}
+
+
+/* Campus Mobile */
+@media only screen and (max-width: 680px) {
+  .campus .main {
+    display: none;
+  }
+
+  .campus .sidebar {
+    width: 100%;
+    border: none;
+  }
+
+  .sidebar .content {
+    flex-direction: column;
+    margin: 16px 0 32px 0;
+    padding: 0;
+  }
+
+  .sidebar .content .image-container {
+    width: 100%;
+  }
+
+  .sidebar .content #text-info {
+    width: 100%;
+    margin-left: 1rem;
+  }
+
+  #text-info h3 {
+    font-size: 1.7rem;
+  }
+
+  #text-info p {
+    font-size: 1rem;
+
+  }
+
+  #text-info p:last-child {
+    margin-bottom: 0;
+  }
+
+  #hidden-mobile {
+    display: none;
+  }
+
+  #visible-mobile {
+    display: block;
+  }
+
+  .highlight {
+    background-color: white;
+  }
+
 }
 
 
@@ -326,6 +487,46 @@ p#button  {
   /* margin-bottom: 1rem; */
 }
 
+/* Classes Mobile */
+@media only screen and (max-width: 680px) {
+  .classes {
+    border: 1px solid hsl(45, 0%, 94%);
+    background-color: white;
+  }
+
+  .classes h2 {
+    font-size: 2.3rem;
+  }
+
+  .classes .image-container,
+  .classes #text-info p {
+    display: none;
+  }
+
+  .classes .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .classes .content {
+    width: 100%;
+    margin: .25rem 0;
+  }
+
+  .classes #text-info {
+    margin: 0;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    background-color: hsl(45, 0%, 76%);
+  }
+
+  .classes #text-info h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+
+}
 
 /* Exhibits */
 
@@ -353,6 +554,35 @@ p#button  {
   margin-bottom: .5rem;
 }
 
+/* Classes Mobile */
+@media only screen and (max-width: 680px) {
+  .exhibits .sidebar {
+    display: none;
+  }
+
+  .exhibits .main #text-info {
+    display: none;
+  }
+
+  .exhibits .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .exhibits .main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+
+  .video-container {
+    margin-bottom: 2rem;
+  }
+
+
+}
+
+
 /* Footer */
 footer {
   display: flex;
@@ -373,4 +603,20 @@ footer a {
 footer p,
 footer a {
   font-size: .7rem;
+}
+
+
+/* Footer Mobile */
+@media only screen and (max-width: 680px) {
+  footer {
+    border: none;
+  }
+
+  footer .legal {
+    display: none;
+  }
+
+  footer p {
+    font-size: .9rem;
+  }
 }

@@ -11,13 +11,12 @@
 
     <!-- Header/Navigation -->
     <header class="container">
-      <nav>
-        <a href="index.html">
-          <div class="logo">
-            <img src="resources/images/ic-logo.svg" alt="Colmar Academy Logo">
-            <span id="colmar">COLMAR</span><span id="academy">ACADEMY</span>
-          </div>
-        </a>
+
+      <nav class="desktop">
+        <div class="logo">
+          <img src="resources/images/ic-logo.svg" alt="Colmar Academy Logo">
+          <span id="colmar">COLMAR</span><span id="academy">ACADEMY</span>
+        </div>
         <div class="menu">
           <ul>
             <li><a href="#">On campus</a></li>
@@ -27,9 +26,22 @@
           </ul>
         </div>
       </nav>
+
+      <nav class="mobile">
+        <ul>
+          <li><a href="#"><img src="resources/images/ic-logo.svg"></a></li>
+          <li><a href="#"><img src="resources/images/ic-on-campus.svg"></a></li>
+          <li><a href="#"><img src="resources/images/ic-online.svg"></a></li>
+          <li><a href="#"><img src="resources/images/ic-login.svg"></a></li>
+        </ul>
+      </nav>
+
+
     </header>
 
+
     <!-- Banner -->
+
     <div class="banner">
 
       <div class="container">
@@ -50,11 +62,12 @@
 
     </div>
 
+
     <!-- Campus/Info Section -->
     <div class="campus container">
 
       <div class="main">
-        <div class="image-container">
+        <div class="image-container orientation">
           <img src="resources/images/information-main.jpg" alt="student reading a textbook on campus">
         </div>
         <div id="text-info">
@@ -67,7 +80,8 @@
       <div class="sidebar">
         <div class="content">
           <div class="image-container">
-            <img src="resources/images/information-orientation.jpg" alt="birds eye view of a campus pathway">
+            <img src="resources/images/information-orientation.jpg" alt="birds eye view of a campus pathway" id="hidden-mobile">
+            <img src="resources/images/information-orientation-mobile.jpg" alt="birds eye view of a campus pathway" id="visible-mobile">
           </div>
           <div id="text-info">
             <h3>Orientation Date</h3>
@@ -78,7 +92,8 @@
 
         <div class="content">
           <div class="image-container">
-            <img src="resources/images/information-campus.jpg" alt="a campus student center">
+            <img src="resources/images/information-campus.jpg" alt="campus student center" id="hidden-mobile">
+            <img src="resources/images/information-campus-mobile.jpg" alt="campus student center-mobile" id="visible-mobile">
           </div>
           <div id="text-info">
             <h3>Our Campus</h3>
@@ -89,7 +104,8 @@
 
         <div class="content highlight">
           <div class="image-container">
-            <img src="resources/images/information-guest-lecture.jpg" alt="guest lecturer Oliver Sack">
+            <img src="resources/images/information-guest-lecture.jpg" alt="guest lecturer Oliver Sack" id="hidden-mobile">
+            <img src="resources/images/information-guest-lecture-mobile.jpg" alt="guest lecturer Oliver Sack" id="visible-mobile">
           </div>
           <div id="text-info">
             <h3>Our guest lecture</h3>
@@ -238,7 +254,7 @@
       <div>
         <p>&copy;2016 Colmar Academy. All rights reserved</p>
       </div>
-      <div>
+      <div class="legal">
         <a href="#">Terms</a>
         <a href="#">Privacy</a>
       </div>
