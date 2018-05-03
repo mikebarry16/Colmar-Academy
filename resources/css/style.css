@@ -19,7 +19,7 @@ html, body {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   font-weight: 800;
   line-height: 1.2;
 
@@ -60,6 +60,10 @@ li {
   overflow: hidden;
 }
 
+.overlay {
+  overflow: hidden;
+}
+
 .image-container img {
   display: block;
   width: 100%;
@@ -86,9 +90,9 @@ li {
   margin: 12px 0;
 }
 
-.highlight {
+/* .highlight {
   background-color: hsl(45, 0%, 90%);
-}
+} */
 
 .sidebar {
   display: flex;
@@ -184,12 +188,13 @@ header .mobile {
 
   nav a {
     vertical-align: bottom;
-
   }
 
   a img {
     height: 100%;
   }
+
+
 
 
 }
@@ -198,12 +203,30 @@ header .mobile {
 /* Banner */
 
 .banner {
-  background-color: hsl(45, 0%, 76%);
+  /* background-color: hsl(45, 0%, 76%); */
+  /* background-color: hsla(53, 100%, 50%, 1);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  height: 500px; */
+  background-color: hsl(53, 18%, 84%);
+
 }
+
+/* .background-clip {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 500px;
+  z-index: 1;
+  background-color: hsla(53, 100%, 50%, 1);
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+} */
 
 .banner .container {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 100;
+
 }
 
 .banner .content {
@@ -217,9 +240,9 @@ header .mobile {
 }
 
 #cta-container {
-  width: 40%;
+  max-width: 25%;
   display: block;
-  margin-left: 2em;
+  margin-left: 3rem;
 }
 
 #cta-container #cta {
@@ -231,7 +254,7 @@ header .mobile {
   margin: 1.5rem 0;
 }
 
-#cta-container p {
+p#text {
   font-size: 1.35rem;
   font-weight: 400;
   margin: 1.5rem 0 2rem 0;
@@ -244,12 +267,55 @@ header .mobile {
   width: 100%;
 }
 
+#button:hover {
+  cursor: pointer;
+  background-color: hsla(53, 100%, 50%, 1);
+  color: gray;
+}
+
 p#button  {
   font-weight: 300;
   color: white;
   text-align: center;
   margin-bottom: 2rem;
-  font-size: .85rem;
+  font-size: 1rem;
+}
+
+/* landscape tablet 1 */
+@media only screen and (max-width: 1237px) {
+  #cta-container {
+    max-width: 25%;
+  }
+
+  #cta-container h1 {
+    font-size: 2.2rem;
+  }
+
+  p#text {
+    font-size: 1.3rem;
+  }
+
+  p#button  {
+    font-size: 1rem;
+  }
+
+}
+
+/* landscape tablet 2 @ 1024 */
+@media only screen and (max-width: 1024px) {
+
+  #cta-container h1 {
+    font-size: 2rem;
+  }
+
+  p#text {
+    font-size: 1.1rem;
+  }
+
+  p#button  {
+    font-size: .8rem;
+  }
+
 }
 
 /* Banner Mobile */
@@ -280,7 +346,7 @@ p#button  {
   }
 
   #cta-container {
-    width: 100%;
+    max-width: 85%;
     margin: 0 auto;
   }
 
@@ -290,13 +356,13 @@ p#button  {
   }
 
   #cta-container h1 {
-    line-height: 1.5;
-    font-size: 2.5rem;
+    line-height: 1.3;
+    font-size: 2.2rem;
   }
 
-  #cta-container p {
+  p#text {
     /* line-height: 1.5; */
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   #button  {
@@ -368,8 +434,13 @@ p#button  {
   display: flex;
   width: 100%;
   padding: 1rem 4rem 1rem 1rem;
+  align-items: center;
 }
 
+.content:hover {
+  cursor: pointer;
+  background-color: hsla(53, 100%, 50%, 1);
+}
 
 .sidebar .content .image-container {
   width: 35%;
@@ -398,8 +469,41 @@ p#button  {
 }
 
 
-/* Campus Mobile */
+
+
+/* Campus landscape tablet  @ 1024 */
+@media only screen and (max-width: 1024px) {
+  .campus .sidebar .image-container {
+    width: 50%;
+  }
+
+}
+
+/* Campus landscape  @ 880 */
+@media only screen and (max-width: 880px) {
+
+  .sidebar #text-info h3 {
+    font-size: 1.0rem;
+  }
+
+  .sidebar #text-info p {
+    font-size: .75rem;
+  }
+
+}
+
+/* Campus Mobile @680 */
 @media only screen and (max-width: 680px) {
+
+  .content:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+
+  .campus .sidebar .image-container {
+    width: 100%;
+  }
+
   .campus .main {
     display: none;
   }
@@ -421,16 +525,15 @@ p#button  {
 
   .sidebar .content #text-info {
     width: 100%;
-    margin-left: 1rem;
+    margin-left: 4rem;
   }
 
-  #text-info h3 {
+  .sidebar #text-info h3 {
     font-size: 1.7rem;
   }
 
-  #text-info p {
+  .sidebar #text-info p {
     font-size: 1rem;
-
   }
 
   #text-info p:last-child {
@@ -455,10 +558,24 @@ p#button  {
 /* Classes */
 
 .classes {
-  background-color: hsl(45, 0%, 90%);
+  background-color: hsl(53, 18%, 84%);
   margin: 0 auto;
   padding: 0 3rem 2rem 3rem;
 }
+
+.classes .image-container {
+  background-color: hsla(53, 100%, 50%, 1);
+}
+
+.classes .image-container img {
+  opacity: 1;
+}
+
+.classes .image-container:hover img {
+  opacity: .3;
+  mix-blend-mode: luminosity;
+}
+
 
 .classes h2 {
   text-align: center;
@@ -486,6 +603,7 @@ p#button  {
 .classes #text-info p {
   /* margin-bottom: 1rem; */
 }
+
 
 /* Classes Mobile */
 @media only screen and (max-width: 680px) {
@@ -519,13 +637,15 @@ p#button  {
     background-color: hsl(45, 0%, 76%);
   }
 
+  .classes #text-info:hover {
+    background-color: hsla(53, 100%, 50%, 1);
+  }
+
   .classes #text-info h3 {
     font-size: 1.3rem;
     margin: 0;
     padding: 0;
   }
-
-
 }
 
 /* Exhibits */
